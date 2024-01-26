@@ -1,0 +1,143 @@
+Conform Report Hash (V1): 335B771321243185F954A3F3515C853285BFB40A9C750DCB99D396499777C1CA423456A704EEBE6F9017B6F6E4757871286FDD4A3378C89CAA67C2486C5C61CD
+
+ 
+ConformanceCheck ASCOM Device Conformance Checker Version 6.6.8048.17861, Build time: 13.01.2022 08:55:26
+ConformanceCheck Running on: ASCOM Platform 6.6 6.6.0.3444
+ 
+ConformanceCheck Driver ProgID: ASCOM.wittinobiArduinoSwitchASCOMv1usbDRIVER.Switch
+ 
+Error handling 
+Error number for "Not Implemented" is: 80040400
+Error number for "Invalid Value 1" is: 80040405
+Error number for "Value Not Set 1" is: 80040402
+Error number for "Value Not Set 2" is: 80040403
+Error messages will not be interpreted to infer state.
+ 
+04:13:37.651 Driver Access Checks              OK       
+04:13:37.658 AccessChecks                               About to create instance using Activator.CreateInstance
+04:13:38.366 AccessChecks                      OK       Successfully created driver using late binding
+04:13:38.373 AccessChecks                               About to set Connected property true
+04:13:38.420 AccessChecks                               About to set Connected property false
+04:13:38.430 AccessChecks                      OK       Successfully connected using late binding
+04:13:38.435 AccessChecks                      INFO     The driver is a .NET object
+04:13:38.441 AccessChecks                      INFO     The AssemblyQualifiedName is: ASCOM.wittinobiArduinoSwitchASCOMv1usbDRIVER.Switch, ASCOM.wittinobiArduinoS
+04:13:38.447 AccessChecks                      INFO     The driver implements interface: ASCOM.DeviceInterface.ISwitchV2
+04:13:38.454 DisposeAndReleaseObject                    About to release AccessChecks driver instance
+04:13:38.460 DisposeAndReleaseObject                    About to set Connected property
+04:13:39.170 AccessChecks                      INFO     Device does not expose interface ISwitch
+04:13:39.220 AccessChecks                               About to set Connected property
+04:13:39.241 AccessChecks                      INFO     Device exposes interface ISwitchV2
+04:13:39.247 AccessChecks                               About to set Connected property
+04:13:39.949 AccessChecks                      OK       Successfully created driver using driver access toolkit
+04:13:39.956 AccessChecks                               About to set Connected property
+04:13:39.991 AccessChecks                      OK       Successfully connected using driver access toolkit
+04:13:39.997 AccessChecks                               About to set Connected property
+ 
+Conform is using ASCOM.DriverAccess.Switch to get a Switch object
+04:13:40.066 ConformanceCheck                  OK       Driver instance created successfully
+04:13:40.143 ConformanceCheck                           About to set Connected property
+04:13:40.150 Connected                                  About to get Connected property
+04:13:40.172 ConformanceCheck                  OK       Connected OK
+ 
+Common Driver Methods 
+04:13:40.235 InterfaceVersion                           About to get property InterfaceVersion
+04:13:40.242 InterfaceVersion                  OK       1
+04:13:40.286 Connected                                  About to get property Connected
+04:13:40.294 Connected                         OK       True
+04:13:40.331 Description                                About to get property Description
+04:13:40.339 Description                       OK       wittinobiArduinoSwitchASCOMv1usbDRIVER Switch
+04:13:40.378 DriverInfo                                 About to get property DriverInfo
+04:13:40.386 DriverInfo                        OK       Information about the driver itself. Version: 6.6
+04:13:40.424 DriverVersion                              About to get property DriverVersion
+04:13:40.433 DriverVersion                     OK       6.6
+04:13:40.471 Name                                       About to get property Name
+04:13:40.480 Name                              OK       wittinobiArduinoSwitchASCOMv1usbDRIVER
+04:13:40.520 CommandString                     INFO     Conform cannot test the CommandString method
+04:13:40.529 CommandBlind                      INFO     Conform cannot test the CommandBlind method
+04:13:40.540 CommandBool                       INFO     Conform cannot test the CommandBool method
+04:13:40.549 Action                            INFO     Conform cannot test the Action method
+04:13:40.557 SupportedActions                           About to call method SupportedActions
+04:13:40.567 SupportedActions                  OK       Driver returned an empty action list
+ 
+Properties 
+04:13:40.737 MaxSwitch                                  About to get property MaxSwitch
+04:13:40.749 MaxSwitch                         OK       8
+ 
+Methods 
+04:13:40.870 GetSwitch 0                                About to call GetSwitch(0) method
+04:13:40.886 GetSwitch 0                       OK       Found switch, state: False
+04:13:40.896 SetSwitch 0                                About to call SetSwitch(0)
+04:13:40.962 SetSwitch                                  About to call GetSwitch(0) method
+04:13:40.976 SetSwitch 0                       OK       Switch correctly changed state
+04:13:40.987 SetSwitch                                  About to call SetSwitch method
+04:13:41.058 GetSwitchName 0                            About to get switch name 0
+04:13:41.073 GetSwitchName 0                   OK       Found switch, name:  Relay 0
+04:13:41.089 GetSwitch 1                                About to call GetSwitch(1) method
+04:13:41.111 GetSwitch 1                       OK       Found switch, state: False
+04:13:41.122 SetSwitch 1                                About to call SetSwitch(1)
+04:13:41.184 SetSwitch                                  About to call GetSwitch(1) method
+04:13:41.199 SetSwitch 1                       OK       Switch correctly changed state
+04:13:41.211 SetSwitch                                  About to call SetSwitch method
+04:13:41.288 GetSwitchName 1                            About to get switch name 1
+04:13:41.327 GetSwitchName 1                   OK       Found switch, name:  Relay 1
+04:13:41.355 GetSwitch 2                                About to call GetSwitch(2) method
+04:13:41.374 GetSwitch 2                       OK       Found switch, state: False
+04:13:41.386 SetSwitch 2                                About to call SetSwitch(2)
+04:13:41.451 SetSwitch                                  About to call GetSwitch(2) method
+04:13:41.468 SetSwitch 2                       OK       Switch correctly changed state
+04:13:41.481 SetSwitch                                  About to call SetSwitch method
+04:13:41.545 GetSwitchName 2                            About to get switch name 2
+04:13:41.560 GetSwitchName 2                   OK       Found switch, name:  Relay 2
+04:13:41.576 GetSwitch 3                                About to call GetSwitch(3) method
+04:13:41.593 GetSwitch 3                       OK       Found switch, state: False
+04:13:41.607 SetSwitch 3                                About to call SetSwitch(3)
+04:13:41.675 SetSwitch                                  About to call GetSwitch(3) method
+04:13:41.690 SetSwitch 3                       OK       Switch correctly changed state
+04:13:41.701 SetSwitch                                  About to call SetSwitch method
+04:13:41.765 GetSwitchName 3                            About to get switch name 3
+04:13:41.781 GetSwitchName 3                   OK       Found switch, name:  Relay 3
+04:13:41.796 GetSwitch 4                                About to call GetSwitch(4) method
+04:13:41.818 GetSwitch 4                       OK       Found switch, state: False
+04:13:41.831 SetSwitch 4                                About to call SetSwitch(4)
+04:13:41.896 SetSwitch                                  About to call GetSwitch(4) method
+04:13:41.913 SetSwitch 4                       OK       Switch correctly changed state
+04:13:41.928 SetSwitch                                  About to call SetSwitch method
+04:13:41.990 GetSwitchName 4                            About to get switch name 4
+04:13:42.019 GetSwitchName 4                   OK       Found switch, name:  Relay 4
+04:13:42.047 GetSwitch 5                                About to call GetSwitch(5) method
+04:13:42.069 GetSwitch 5                       OK       Found switch, state: False
+04:13:42.084 SetSwitch 5                                About to call SetSwitch(5)
+04:13:42.149 SetSwitch                                  About to call GetSwitch(5) method
+04:13:42.165 SetSwitch 5                       OK       Switch correctly changed state
+04:13:42.178 SetSwitch                                  About to call SetSwitch method
+04:13:42.243 GetSwitchName 5                            About to get switch name 5
+04:13:42.258 GetSwitchName 5                   OK       Found switch, name:  Relay 5
+04:13:42.278 GetSwitch 6                                About to call GetSwitch(6) method
+04:13:42.298 GetSwitch 6                       OK       Found switch, state: False
+04:13:42.310 SetSwitch 6                                About to call SetSwitch(6)
+04:13:42.375 SetSwitch                                  About to call GetSwitch(6) method
+04:13:42.395 SetSwitch 6                       OK       Switch correctly changed state
+04:13:42.423 SetSwitch                                  About to call SetSwitch method
+04:13:42.485 GetSwitchName 6                            About to get switch name 6
+04:13:42.516 GetSwitchName 6                   OK       Found switch, name:  Relay 6
+04:13:42.539 GetSwitch 7                                About to call GetSwitch(7) method
+04:13:42.563 GetSwitch 7                       OK       Found switch, state: False
+04:13:42.579 SetSwitch 7                                About to call SetSwitch(7)
+04:13:42.646 SetSwitch                                  About to call GetSwitch(7) method
+04:13:42.672 SetSwitch 7                       OK       Switch correctly changed state
+04:13:42.696 SetSwitch                                  About to call SetSwitch method
+04:13:42.766 GetSwitchName 7                            About to get switch name 7
+04:13:42.787 GetSwitchName 7                   OK       Found switch, name:  Relay 7
+ 
+Performance 
+04:13:47.878 MaxSwitch                         INFO     Transaction rate: 43092,5 per second
+04:13:52.902 GetSwitch                         INFO     Transaction rate: 402,2 per second
+04:13:57.921 GetSwitchName                     INFO     Transaction rate: 412,3 per second
+ 
+Conformance test complete 
+04:13:58.031 DisposeAndReleaseObject                    About to release Switch driver instance
+04:13:58.043 DisposeAndReleaseObject                    About to set Connected property
+ 
+No errors, warnings or issues found: your driver passes ASCOM validation!! 
+ 
+Driver Hash Value: 4C7C51487E0C1B554F518A74A9AF9A7C85FA4F6867C18913C22B78681DF846461C1D037CDD42B88BE7ED76DE77E6A46D9577341ED9520D8ABFB095114EEE3A34
