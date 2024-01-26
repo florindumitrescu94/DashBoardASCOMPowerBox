@@ -74,11 +74,9 @@
 	        As of NINA 2.x, the values in the Gauge portions cannot be used inside the Sequencer. However, with Nina 3.x comes a new plugin called Sequence Powerups <url>https://marcblank.github.io/</url>. Using this plugin, you can create functions based on values avaliable on your devices. <br>
                 Therefore, you can, say, automate dew heaters based on dew point or humidity using  the conditional functions in this plugin. <br>
 		<br>
-		<img src="https://github.com/florindumitrescu94/DashBoardASCOMPowerBox/assets/16653100/b05b2a44-b6aa-48bc-8d2d-8836e7c5a1fd
-"></img>
+		<img src="https://github.com/florindumitrescu94/DashBoardASCOMPowerBox/assets/16653100/b05b2a44-b6aa-48bc-8d2d-8836e7c5a1fd"></img>
                 <br>
-		<img src="https://github.com/florindumitrescu94/DashBoardASCOMPowerBox/assets/16653100/fb170d53-3f2e-4bbd-a954-7fa60f2098cf
-"></img>
+		<img src="https://github.com/florindumitrescu94/DashBoardASCOMPowerBox/assets/16653100/fb170d53-3f2e-4bbd-a954-7fa60f2098cf"></img>
   <br>
   <br>
   <br>
