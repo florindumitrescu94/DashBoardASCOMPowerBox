@@ -4,6 +4,7 @@
 	        I have used wittinobi's driver as inspiration and to understand how an ASCOM driver works, so many thanks to Tobias Wittmann for making this driver available! 
 <br>
 	        All the folders and the assembly name is still wittinobi's defaults, since I didn't manage to change them to my own without breaking the functionality.
+	<br><b>NOTE! I have not modified the APP for this version, since I intend to only use it inside of NINA. If you want to use a Windows app, you will need to modify the code for that app (It's not compatible with my driver)</b>
 <br>
 	<br>
 	        <br> 
