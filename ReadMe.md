@@ -54,6 +54,8 @@
                 VOLT = VOLT_TEMP / <b>>0.092</b>
 	        <br>
 	        <br>
+	        The total power consumption is calculated by measuring the time it takes to run the GET_POWER Function, then multiplying the PWR parameter with the time difference in hours (time2-time1)*3600000)<br>
+	        PWR_TOTAL=PWR_TOTAL+(PWR*((time2-time1)/3600000));<br><br><br>
 		<img src="https://github.com/florindumitrescu94/DashBoardASCOMPowerBox/assets/16653100/1a9b26e9-b54e-47ae-b7e0-ee424dd57b13"></img>
                 <br>
 		<br>
