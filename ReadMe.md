@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
 <body>
-		Driver based on wittinobi's driver to accomodate my Arduino code. This driver contains code to read the environmental sensor (DHT22), control two PWM outputs for dew heaters, measure and display power consumption stats (voltage, current, power) and control one relay (connected to four DC Jacks, in my case. Arduino code is in the INO folder. <br>
+	        I have used wittinobi's driver as inspiration and to understand how an ASCOM driver works, so many thanks to Tobias Wittmann for making this driver available! 
+<br>
+	        All the folders and the assembly name is still wittinobi's defaults, since I didn't manage to change them to my own without breaking the functionality.
+<br>
+	<br>
+	        <br> 
+	        After searching online and only finding wittinobi's project as a DIY powerbox solution, I started this project, called DashBoard (since it contains most controls and information about the power delivery and environment, akin to a car dashboard). <br>
+	        This is a fully open project and anyone can replicate and modify the arduino code or the driver to accomodate their needs. <br>
+		This driver contains code to read the environmental sensor (DHT22), control two PWM outputs for dew heaters, measure and display power consumption stats (voltage, current, power) and control one relay (connected to four DC Jacks, in my case. Arduino code is in the INO folder. <br>
 		<br>
 		<br>
 		The schematic is listed below.
