@@ -1,15 +1,98 @@
 <!DOCTYPE html>
 <html>
-<body>
-	        I have used wittinobi's driver as inspiration and to understand how an ASCOM driver works, so many thanks to Tobias Wittmann for making this driver available! 
-<br>
-	        All the folders and the assembly name is still wittinobi's defaults, since I didn't manage to change them to my own without breaking the functionality.
+	<header>
+		<h1> WORK IN PROGRESS WORK IN PROGRESS <br>
+			This document is a work in progress and it may not contain all the necessary information
+		</h1>
+	<header>
+		<h1>DashBoard </h1>
+		<h2>An ASCOM connected powerbox with PWM controlls, environmental sensors and current measurements built with an Arduino Nano microcrontroller board</h2>
+                <p>
+		I wanted to solve a problem that I have faced whenever I left my telescope to shoot a target overnight: I want to turn off the power to my equipment after the NINA sequence.<br>
+		I don't want to have the dew heaters and mount running until the morning, when I go out and turn them off.<br>
+		The best solution would be to have an ASCOM controlled powerbox, so that I can add instructions to turn off the power inside a NINA sequence. <br>
+		Of course, there are readily build options out there, like PegasusAstro PocketPower, or integrated inside ASIAIR or EagleLab computers, but I already have a mini-pc that runs wonderfully and I didn't want to either spend a lot for a power box, or swap my computer for a new system.<br>
+	        After searching online and only finding wittinobi's project as a DIY powerbox solution, I started this project, called DashBoard (since it contains most controls and information about the power delivery and environment, akin to a car dashboard). <br>
+	        This is a fully open project and anyone can replicate and modify the arduino code or the driver to accomodate their needs.
+		<br><br><br>
+		I will describe this project in the following document.
+		</p>
+	</header>
+	<header>
+		<h2>
+			Special notes
+		</h2>
+		<p>I have used wittinobi's driver as inspiration and to understand how an ASCOM driver works, so many thanks to Tobias Wittmann for making this driver available! <br>
+	        All the folders and the assembly name is still wittinobi's defaults, since I didn't manage to change them to my own without breaking the functionality.<br><br>
+			This is a very young project and has its' shortcomings. I intend on expanding and enhancing it, based on feedback or new ideas, which are all very welcome!<br>
+		<h2>
+			Contents:
+		</h2>
+		<p>
+			Project description<br>
+			Requirements<br>
+			Diagram<br>
+			Schematic<br>
+			Arduino code<br>
+			Software control<br>
+			Known Issues<br>
+			Future improvements<br>
+		</p>
+	</header>
+
+ <header>
+<h2>
+	Project description
+</h2>
+<p>
+	This project is meant to create a device capable of controling the power delivery to astrophotography devices (mount, camera, dew heaters, etc.), as well as monitoring the environmental conditions and power consumption.<br> In order to automate an astrophotography sessions, this control and monitoring needs to happen through ASCOM, so that we can use instructions in NINA to turn the power on or off and increase or decrease the power to the dew heaters, as well as use the information we have gathered from the sensors as triggers. <br><br>
+	To acheive that, we will require:<br><br><br>
+ <b>-4 x 12V Output DC jacks controlled by one relay</b><br>
+ <b>-Two RCA PWM controlled via two MOSFETS for the dew heaters</b><br>
+ <b>-A DHT22 sensor that measures the outside temperature and humidity conditions</b><br>
+ <b>-An ACS712 current sensor to measure the current and power consumption</b><br>
+	<b>-An Arduino Nano microcontroller board</b>
+	The Arduino will be the connection between the hardware and software and it will communicate with the ASCOM driver via serial commands.<br>
+	Both the Arduino and the ASCOM driver will listen and send commands over serial and will execute functions based on said commands. The ASCOM Driver will have some pre-determined function names that will be called by an application like N.I.N.A. (GetSwitch, for example, to check the state of a boolean switch). The functions in the Arduino code can be fully customized, as long as they send the correct data back via serial.<br>
+</p>
+ </header>
+ <header>
+	 <h2>Requrements</h2>
+	 <p>
+		 This project will require the following tools, parts and software:<br><br>
+			 <b>PARTS:</b><br>
+    			-Arduino NANO<br>
+       			-ACS712 (5A/20A/30A, *NOTE1)<br>
+	  		-DHT22 sensor module<br>
+     			-5V relay (JQK-3FF-S-Z-5V)<br>
+			-1 x 1nF SMD capacitor<br>
+   			-1 x 100nF SMD capacitor<br>
+      			-1 x 470uF TH capacitor( *NOTE2)<br>
+			-2 x IR2905 N-MOSFET transistors<br>
+   			-3 x 10k SMD resistors<br>
+      			-1 x 100k SMD resistor<br>
+	 		-2 x 100 SMD resistors<br>
+    			-1 x 470-510 SMD resistor<br>
+			-1 x S8050(J3Y) SMD transistor<br>
+       			-1 x 1N4007 TH diode<br>
+	  		-1 x 1N4148 SMD diode<br>
+     			-at least two DC Jack (PCB or Panel mount, based on choice), one for 12V input and at least one for 12V output.<br>
+			-2 x RCA Plugs<br>
+		 	-1 x at least 10cm by 10cm circuit board for etching, or perfboard.<br>
+		 	If you chose a perfboard, go with through hole components. It's very difficult to solder SMD parts to perf boards.<br>
+		 	Also, if you chose panel mounted jacks, you will need some wires. I find that, for the higher current needs, speaker wire, or PC power supply wires work perfectly. For low current, any wires would do. <br><br><br>
+		 	<b>TOOLS:</b><br><br>
+		 	-Soldering station<br>
+		 	-ESS Safe Tweezers<br>
+		 	-Rosin-core solder (the thinner, the better, 1mm or smaller)<br>
+		 	-Flux<br>
+		 	-Helping hands or electronics vise<br>
+	 </p>
+ </header>
 	<br><b>NOTE! I have not modified the APP for this version, since I intend to only use it inside of NINA. If you want to use a Windows app, you will need to modify the code for that app (It's not compatible with my driver)</b>
 <br>
 	<br>
 	        <br> 
-	        After searching online and only finding wittinobi's project as a DIY powerbox solution, I started this project, called DashBoard (since it contains most controls and information about the power delivery and environment, akin to a car dashboard). <br>
-	        This is a fully open project and anyone can replicate and modify the arduino code or the driver to accomodate their needs. <br>
 		This driver contains code to read the environmental sensor (DHT22), control two PWM outputs for dew heaters, measure and display power consumption stats (voltage, current, power) and control one relay (connected to four DC Jacks, in my case. Arduino code is in the INO folder. <br>
 		<br>
 		<br>
