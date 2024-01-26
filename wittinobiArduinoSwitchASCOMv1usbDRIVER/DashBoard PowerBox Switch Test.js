@@ -1,5 +1,5 @@
 //*** CHECK THIS ProgID ***
-var X = new ActiveXObject("ASCOM.DashBoard PowerBox.Switch");
+var X = new ActiveXObject("ASCOM.DashBoard PowerBox Switch.Switch");
 WScript.Echo("This is " + X.Name + ")");
 // You may want to uncomment this...
 // X.Connected = true;
