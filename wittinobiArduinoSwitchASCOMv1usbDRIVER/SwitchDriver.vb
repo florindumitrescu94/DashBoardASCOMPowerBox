@@ -57,7 +57,7 @@ Public Class Switch
     ' Driver ID and descriptive string that shows in the Chooser
     '
     Friend Shared driverID As String = "ASCOM.wittinobiArduinoSwitchASCOMv1usbDRIVER.Switch"
-    Private Shared driverDescription As String = "DashBoard PowerBox"
+    Private Shared driverDescription As String = "DashBoard PowerBox Switch"
     Friend Shared comPortProfileName As String = "COM Port" 'Constants used for Profile persistence
     Friend Shared traceStateProfileName As String = "Trace Level"
     Friend Shared comPortDefault As String = "COM1"
